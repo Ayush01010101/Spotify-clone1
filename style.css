@@ -40,7 +40,12 @@
 }
 .upper{
     margin:10px;
+    padding-left: 10px  ;
 }
 .logo{
     padding:10px;
+}
+.lower{
+    margin:10px;
+    padding-left: 13px;
 }
