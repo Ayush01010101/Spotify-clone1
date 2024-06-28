@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}       
+.container{
+    background-color: #000000;
+    color: white;
+    /* margin:10px; */
+    /* margin: auto;
+    text-align: center; */
+}
+.upper li{
+    
+    /* margin: 10px;; */
+    
+    list-style: none;
+    
+    
+}
+.lower{
+    /* height: 100vh; */
+}
+.left{
+    width: 25vw;
+    height: 100vh;
+    
+}
+.right{
+    height: 100vh;
+    width: 75vw;
+    
+}
+.list{
+    gap:40px;
+}
+.upper li{
+    display: flex;
+    gap:14px;
+    /* padding:20px; */
+}
+.upper{
+    margin:10px;
+}
+.logo{
+    padding:10px;
+}
