@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }       
 .container{
     background-color: #000000;
@@ -8,6 +9,7 @@
     /* margin:10px; */
     /* margin: auto;
     text-align: center; */
+    /* flex-wrap: wrap; */
 }
 .upper li{
     
@@ -25,11 +27,7 @@
     height: 100vh;
     
 }
-.right{
-    height: 100vh;
-    width: 75vw;
-    
-}
+
 .list{
     gap:40px;
 }
@@ -48,4 +46,66 @@
 .lower{
     margin:10px;
     padding-left: 13px;
+    height: 76vh    ;
+    position: relative;
+}
+
+.lib{
+    font-size: 11px;
+    padding-top:15px;
+    padding-left: 13px;
+    gap:16px;
+    opacity: 0.6;
+}
+.lib img{
+    width: 23px;
+    
+}
+.legal{
+    /* width: 100px; */
+    width: 254px;
+    
+    text-align: center;
+    display: flex;
+    opacity: 0.5;
+    font-size: 7px;
+    gap:10px;
+    position: absolute;
+    padding-bottom: 30px;
+    /* padding:0 24px; */
+    bottom:0;
+    /* margin:auto
+
+     */
+     padding-left: 10px;
+     flex-wrap: wrap;
+}
+
+
+
+
+
+/* Right Part */
+
+.right{
+    background-color: #121212;  
+    height: 96.8vh;
+    width: 75vw;
+    position: relative;
+    top:10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap:10px; */
+    padding:30px;    
+    background-color: rgb(34,34,34);
+}
+.header button{
+
+    padding: 18px 29px 18px 29px;   
+    border-radius:30px;;
+    border-style: none;
 }
