@@ -44,6 +44,7 @@
   padding-left: 13px;
   height: 76vh;
   position: relative;
+  
 }
 
 .lib {
@@ -52,6 +53,7 @@
   padding-left: 13px;
   gap: 16px;
   opacity: 0.6;
+  
 }
 .lib img {
   width: 23px;
@@ -174,19 +176,24 @@
  
 } 
 .song_name{
-  display: flex;
+  position: relative;
+  top:20px;
+  /* display: flex; */
   padding:10px;  
+  margin: 20px;
   margin-top:10px;
-  flex-wrap: wrap;
-  
+  /* flex-wrap: wrap; */
+  /* border:2px solid red; */
+  height: 24em;
 }
 .song_name ol {
   list-style-type: decimal;
+ 
 }
 
 .song_name ol li {
   padding: 20px;
   list-style-type: decimal;
-  color: white;
+ 
 }
 

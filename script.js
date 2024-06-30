@@ -13,7 +13,9 @@ async function getsongs() {
             
             let string=newarr.join("");
             
-            arr.push(string)
+            let p1=string.replaceAll("%20"," ");
+            let p2=p1.replaceAll(".mp3","");
+            arr.push(p2)
 
 
             
