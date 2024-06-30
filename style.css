@@ -11,7 +11,7 @@
     text-align: center; */
   /* flex-wrap: wrap; */
 }
-.upper li {
+.upper .p-1 {
   /* margin: 10px;; */
 
   list-style: none;
@@ -159,6 +159,7 @@
   bottom: 0;
   width: 100%;
   justify-content: center;
+  
   align-items: center;
 }
 .control {
@@ -171,4 +172,8 @@
 .play_pause img {
   height: 30px;
  
+} 
+.song_name{
+  padding:40px;
 }
+
