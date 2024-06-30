@@ -5,13 +5,21 @@ async function getsongs() {
     div.innerHTML = song_data;
     // console.log(song_data_div.innerHTML=song_data)
     let song_arr = div.getElementsByTagName("a");
+    let newarr=[];
     let arr = [];
     for (let i = 0; i < song_arr.length; i++) {
         if (song_arr[i].href.endsWith(".mp3")) {
-            arr.push(song_arr[i].href.split("/songs/")[1])
+            let newarr=[song_arr[i].href.split("/songs/")[1]];
+            
+            let string=newarr.join("");
+            
+            arr.push(string)
+
+
             
             
         }
+        
     }
     
     // console.log(arr)
@@ -25,10 +33,12 @@ async function main() {
    
     // let song = new Audio(get[4]);   
 
-//    for (const i of get) {
-//         let song=document.getElementById("song_name").getElementsByTagName("ul")[0];
-//         song.innerHTML=song.innerHTML + `<li> ${i} </li>`
-//    }
+   for (const i of get) {
+        let song=document.getElementById("song_name").getElementsByTagName("ol")[0];
+
+        song.innerHTML=song.innerHTML + `<li> ${i} </li>`
+
+   }
 
 }
 
