@@ -36,9 +36,17 @@ async function main() {
     // let song = new Audio(get[4]);   
 
    for (const i of get) {
-        let song=document.getElementById("song_name").getElementsByTagName("ol")[0];
+        let song=document.getElementById("song-list");
 
-        song.innerHTML=song.innerHTML + `<li> ${i} </li>`
+        song.innerHTML=song.innerHTML+`<div class="songcard">
+                        <img class="invert songcard_img1" src="controls/music.svg" alt="music logo">
+                        <div class="songinfo">
+                            <div class="song__name">
+                                ${i}
+                            </div>
+                        </div>
+                        <img class="songcard_img2" src="controls/play.svg" alt="">
+                    </div>`
 
    }
 
