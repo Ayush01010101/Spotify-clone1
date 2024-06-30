@@ -5,6 +5,7 @@
 }
 .container {
   background-color: #000000;
+  display: flex;
   color: white;
   /* margin:10px; */
   /* margin: auto;
@@ -186,6 +187,8 @@
   /* border:2px solid red; */
   height: 24em;
 }
+
+/* old song */
 .song_name ol {
   list-style-type: decimal;
  
@@ -197,3 +200,28 @@
  
 }
 
+
+.song-list{
+  height: 26em;
+  overflow-y:scroll;  
+  margin:25px;
+  display: flex ;
+  justify-content: center;
+
+
+}
+.songcard{
+  /* display: flex; */
+  display:flex;
+  height: 100px;
+  width:200px;
+  border:2px solid red;
+  margin:10px;
+  align-items: center;
+  gap:20px;
+  justify-content: space-around;
+  
+}
+.songcard img{
+  width: 28px;
+}
