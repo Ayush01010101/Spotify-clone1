@@ -207,6 +207,13 @@
   margin:25px;
   display: flex ;
   justify-content: center;
+  flex-wrap: wrap;
+  /* ::-webkit-scrollbar-thumb {
+    background: #3a3434;
+    border-radius: 1px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 1px rgba(255, 255, 255, 0.3);
+} */
+
 
 
 }
