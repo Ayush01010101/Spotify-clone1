@@ -1,4 +1,19 @@
-let currentMusic=new Audio();
+let currentMusic = new Audio("Songs\\CUTE DEPRESSED.mp3");
+
+function secondsToMinutesSeconds(seconds) {
+  if (isNaN(seconds) || seconds < 0) {
+      return "00:00";
+  }
+
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
+
 async function getsongs() {
   let songs = await fetch("http://127.0.0.1:3000/songs/");
   let song_data = await songs.text();
@@ -23,10 +38,12 @@ async function getsongs() {
   // console.log(arr)
   return arr;
 }
-const play_song=((track)=>{
-  currentMusic.src=`Songs\\${track}.mp3`;
+const play_song = (track = "CUTE DEPRESSED") => {
+  currentMusic.src = `Songs\\${track}.mp3`;
   currentMusic.play();
-})
+  document.getElementById("play").src = "controls\\pause.svg";
+  document.getElementById("song-info").innerHTML = track;
+};
 
 async function main() {
   let get = await getsongs();
@@ -34,7 +51,6 @@ async function main() {
   // plays.play();
 
   // let song = new Audio(get[4]);
-
 
   for (const i of get) {
     let song = document.getElementById("song-list");
@@ -50,21 +66,54 @@ async function main() {
                         <img class="songcard_img2" src="controls/play.svg" alt="">
                         
                     </div>`;
-
-
   }
   for (let i = 0; i < get.length; i++) {
     let test = document.querySelector(".song-list").children[i];
     test.addEventListener("click", () => {
       let track = test.innerText;
-      
+
       play_song(track);
-    
-      
-      
-     
     });
   }
+  let a = 0;
+  document.getElementById("play").addEventListener("click", () => {
+    if (currentMusic.paused) {
+      document.getElementById("play").src = "controls\\pause.svg";
+
+      currentMusic.play();
+      if (a == 0) {
+        play_song();
+        a++;
+      }
+    } else {
+      document.getElementById("play").src = "controls\\play.svg";
+      currentMusic.pause();
+    }
+  });
+  currentMusic.addEventListener("timeupdate", () => {
+    let duration = currentMusic.duration;
+    let current_time = currentMusic.currentTime;
+    document.getElementById("current_time").innerHTML=`${secondsToMinutesSeconds(current_time)} :`
+    document.getElementById("duration").innerHTML=secondsToMinutesSeconds(duration); 
+
+    document.querySelector(".circle").style.left =(current_time/duration)*100+"%";
+  });
+
+
+  // seekbar function 
+
+
+
+  document.querySelector(".sickbar").addEventListener("click",e=>{
+    let percentage=(e.offsetX/e.target.getBoundingClientRect().width)*100
+    document.querySelector(".circle").style.left=percentage + "%";
+    currentMusic.currentTime = ((currentMusic.duration)*percentage)/100
+    
+  })
 }
+
+
+
+
 
 main();
