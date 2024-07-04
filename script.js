@@ -110,6 +110,11 @@ async function main() {
     currentMusic.currentTime = ((currentMusic.duration)*percentage)/100
     
   })
+  document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector(".left ").style.backgroundColor='black';
+    document.querySelector(".left").style.left="0px";
+    
+  })
 }
 
 

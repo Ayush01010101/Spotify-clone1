@@ -1,10 +1,12 @@
 @media (max-width: 1250px) {
     .left {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         /* background-color: black; */
         left:-500px;    
+        z-index: 10;
+        overflow-y: hidden;
     }
     .right{
         width: 100vw;
@@ -17,5 +19,18 @@
         display:inline;
         cursor:pointer;
     }
-    
+    .song-list{
+       
+        width:87vw;
+    }
+    .containerofsonglist{
+        
+        width: 87vw;
+        
+    }
+    .songcard{
+        
+        height: 18vh;
+        width: 79vw;
+    }
 }   

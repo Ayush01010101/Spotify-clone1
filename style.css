@@ -262,6 +262,8 @@
   /* display: flex; */
   display: flex;
   text-align: center;
+  align-items: center ;
+  flex-wrap: wrap;
   height: 14vh;
   width: 14vw;
   padding:10px;
