@@ -247,9 +247,7 @@
   /* display: flex; */
   justify-content: center;
   flex-wrap: wrap;
-  border:2px solid red;
   
-
   
 }
 .containerofsonglist {
@@ -264,8 +262,8 @@
   /* display: flex; */
   display: flex;
   text-align: center;
-  height: 100px;
-  width: 200px;
+  height: 14vh;
+  width: 14vw;
   padding:10px;
   border-radius: 10px;
   background-color:rgba(74, 63, 52, 0.09);
