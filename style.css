@@ -117,6 +117,9 @@
   border-radius: 30px;
   border-style: none;
 }
+.hamburger{
+  display: none;
+}
 
 .flexing {
   display: flex;
@@ -138,8 +141,8 @@
 }
 
 .card {
-  height: 30vh;
-  width: 10vw;
+  height: 180px;
+  width: 140px;
   /* padding-left: 24px;
     padding-top: 24px; */
   border-radius: 8px;
@@ -148,14 +151,17 @@
   margin-top: 20px;
   /* background-color: red; */
   background-color: rgb(34, 32, 32);
-  text-align: center;
+  text-align: center; 
+  object-fit: contain;
+  
 }
-
 .card img {
+  object-fit: contain;
+  
   margin: 7px;
   border-radius: 8px;
-  height: 20vh;
-  width: 9vw;
+  height: 100px;
+  width: 100px;
   /* padding:10px; */
 }
 
@@ -203,6 +209,7 @@
 
 }
 
+
 .song_name {
   position: relative;
   top: 20px;
@@ -230,20 +237,28 @@
 
 .song-list {
  
-  max-height: 26em;
+  /* max-height: 40vh;
+  max-width: 20em; */
+  height: 50vh;
+  width: 15vw;
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 25px;
   /* display: flex; */
   justify-content: center;
   flex-wrap: wrap;
+  border:2px solid red;
+  
 
-
-
-
-
-
-
+  
+}
+.containerofsonglist {
+  width: 22vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
 }
 .songcard {
   /* display: flex; */
@@ -344,7 +359,7 @@
 .holder{
   display: flex;
   justify-content: space-around;
- 
+  flex-wrap: wrap;
   width: 50vw;
   align-items: center ;
 
@@ -357,4 +372,8 @@
   /* border:2px solid red; */
   /* width: 100px; */
   gap:10px;
+}
+.arrow .menu_image{
+  display: none;
+  
 }

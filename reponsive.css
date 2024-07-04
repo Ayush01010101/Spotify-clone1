@@ -1,0 +1,22 @@
+@media (max-width: 1250px) {
+    .left {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        /* background-color: black; */
+        left: -500px;
+        z-index: 10;
+    }
+    .right{
+        width: 100vw;
+        
+    }
+    .player{
+        width:100%;
+    }
+    .hamburger{
+        display:inline;
+        cursor:pointer;
+    }
+    
+}   

@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="reponsive.css">
 </head>
 
 <body>
     <div class="container flex ">
-        <div class="left  test_margin">
+        <div class="left  ">
             <div class="upper   back_color rounded ">
                 <img src="images/logo.svg" alt="main_logo" class="invert logo">
                 <ul>
@@ -25,13 +26,16 @@
                 <div class="lib flex">
                     <img src="images/Lib.svg" alt="Library" class="invert">
                     <h2>Your Library</h2>
-
+                        
                 </div>
-                <div class="song-list " id="song-list">
+                <div class="containerofsonglist">
 
-                    <!-- from the javascript file -->
-
-
+                    <div class="song-list flex" id="song-list">
+                        
+                        <!-- from the javascript file -->
+                        
+                        
+                    </div>
                 </div>
 
 
@@ -47,23 +51,28 @@
                     </div>
                 </footer>
 
-            
+
             </div>
 
         </div>
         <div class="right rounded">
             <div class="header rounded">
+                <img class="hamburger invert" src="images/hamburger.svg" width="30"="Menu">
                 <div class="arrow">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path 
+                    <svg id="svg1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
                             d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"
                             fill="currentColor" />
                     </svg>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="svg2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z"
                             fill="currentColor" />
                     </svg>
+                    <div class="menu_image invert">
+                        <img src="images/hamburger.svg" alt="Menu">
+
+                    </div>
                 </div>
                 <nav>
                     <button class="invert">Sign up</button>
@@ -71,44 +80,87 @@
                 </nav>
             </div>
             <div class="playlist">
-                
+
                 <h2 class="playlist-1 ">Popular Playlist</h2>
                 <div class="flexing">
-                    
 
 
-                    <div class="card-container">
-                        <div class="card">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+
+
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
                         <h3>Sajni</h3>
                         <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
                     </div>
-                    
+
+
+
+
+
+
+
+
+
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="Song_image ">
+                        <h3>Sajni</h3>
+                        <p>Ram Sampath,Arijit Singh,Prashant Pandey</p>
+                    </div>
+
+
 
                 </div>
-               
+
+
+
 
             </div>
-                
-            
-            
-        </div>    
-        <div class="player">
+            <div class="player">
 
-            <div class="holder">
+                <div class="holder">
 
 
 
-                <div class="song-info" id="song-info">
-                   
-                </div>
-                
+                    <div class="song-info" id="song-info">
+
+                    </div>
+
                     <div class="play_pause " id="play_pause">
                         <img id="previous" src="controls/previous.svg" alt="">
                         <img id="play" src="controls/play.svg" alt="">
                         <img id="next" src="controls/next.svg" alt="">
                     </div>
-                
+
                     <div class="songtime">
                         <div id="current_time">
 
@@ -116,24 +168,24 @@
                         <div id="duration">
 
                         </div>
-                        
+
                     </div>
 
 
+                </div>
+
+                <div class="sickbar">
+
+                    <div class="circle">
+
+                    </div>
+                </div>
+
             </div>
 
-            <div class="sickbar">
-            
-                <div class="circle">
-                    
-                </div>
-            </div>
-        
+
         </div>
-       
-        
-        </div>
-        
+
     </div>
 
 
