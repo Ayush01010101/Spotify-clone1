@@ -45,6 +45,13 @@ const play_song = (track = "CUTE DEPRESSED") => {
   document.getElementById("song-info").innerHTML = track;
 };
 
+
+
+
+
+
+
+
 async function main() {
   let get = await getsongs();
   // let plays=new Audio("Songs\\DNA .mp3");
@@ -115,6 +122,69 @@ async function main() {
     document.querySelector(".left").style.left="0px";
     
   })
+
+
+  // close button click
+
+  document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left="-200vw";
+
+  })
+
+  // for next
+  next.addEventListener("click",()=>{
+   
+    // console.log( currentMusic.src.);
+    let source=currentMusic.src.split("/")[4].replace("%20"," ").replace(".mp3","");
+    let index=get.indexOf(source);
+    
+
+    
+    if(index<=get.length){
+      play_song(get[index+1])
+    }
+    
+    
+  })
+  
+
+
+  // for previous
+  previous.addEventListener("click",()=>{
+    let source=currentMusic.src.split("/")[4].replace("%20"," ").replace(".mp3","");
+    let index=get.indexOf(source);
+    
+
+    
+    if(index>=0){
+      play_song(get[index-1])
+    }
+
+  })
+
+
+  //event listner for volume range
+  document.querySelector("#range").addEventListener("change",(e)=>{
+    console.log(e.target.value);
+    currentMusic.volume=parseInt(e.target.value)/100;
+    
+    if(e.target.value<=0){
+      document.querySelector(".volume_button").src="images\\mute.svg"
+    }
+    else if(e.target.value>=80){
+      
+      document.querySelector(".volume_button").src="images\\high_volume.svg"
+    }
+    else{
+      document.querySelector(".volume_button").src="images\\volume.svg"
+      
+    }
+    
+    
+  })
+
+
+
 }
 
 
