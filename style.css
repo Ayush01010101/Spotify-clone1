@@ -153,6 +153,8 @@
   background-color: rgb(34, 32, 32);
   text-align: center; 
   object-fit: contain;
+  cursor: pointer;
+
   
 }
 .card img {
@@ -247,7 +249,7 @@
   max-width: 20em; */
   height: 50vh;
   width: 15vw;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   margin: 25px;
   /* display: flex; */

@@ -14,8 +14,8 @@ function secondsToMinutesSeconds(seconds) {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-async function getsongs() {
-  let songs = await fetch("http://127.0.0.1:3000/songs/");
+async function getsongs(folder="hindi songs") {
+  let songs = await fetch(`http://127.0.0.1:3000/songs/${folder}`);
   let song_data = await songs.text();
   let div = document.createElement("div");
   div.innerHTML = song_data;
@@ -182,7 +182,7 @@ async function main() {
     
     
   })
-
+  
 
 
 }
